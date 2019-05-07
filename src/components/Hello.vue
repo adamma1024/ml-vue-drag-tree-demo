@@ -13,7 +13,8 @@
         <vue-drag-tree 
         :data='data' 
         :allowDrag='allowDrag' 
-        :allowDrop='allowDrop' 
+        :allowDrop='allowDrop'
+        :openNames='openNames' 
         @current-clicked='curNodeClicked' 
         @drag="dragHandler" 
         @drag-enter="dragEnterHandler" 
@@ -47,6 +48,7 @@ export default {
   data() {
     return {
       en: false,
+      openNames: [3],
       data: [
         {
           title: "Node 0-0",
