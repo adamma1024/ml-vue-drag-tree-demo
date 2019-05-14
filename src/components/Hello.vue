@@ -25,8 +25,8 @@
         @on-data-change="changeData"
         @on-node-data-change="onNodeChange"
         expand-all>
-          <template slot="icon" slot-scope="props">
-            <Icon :type="props.node.icon"></Icon>
+          <template #icon="{ node }">
+            <Icon :type="node.icon"></Icon>
           </template>
         </vue-drag-tree>
       </div>
