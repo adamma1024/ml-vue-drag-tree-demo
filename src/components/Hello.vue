@@ -25,7 +25,7 @@
         @on-data-change="changeData"
         @on-node-data-change="onNodeChange"
         expand-all>
-          <template #icon="{ node }">
+          <template #node-icon="{ node }">
             <Icon :type="node.icon"></Icon>
           </template>
         </vue-drag-tree>
@@ -104,6 +104,9 @@ export default {
       console.info('进行了'+name+'操作')
       console.log('受影响的父级nodeID：'+parentNode.id)
       console.log('拖动节点数据id：'+node.id)
+    },
+    changeEnd(){
+
     },
     changeData(val){
       this.data = val
